@@ -262,6 +262,67 @@ body > section > div > div > div > div > div > div > div > button.btn-fill {
   bottom: 5px;
   right: 10px;
 }
+
+/* earn section */
+.earn-section {
+  margin-top: 50px;
+}
+.earn-section h2 {
+  text-align: center;
+  color: #3c3c3c;
+  margin-bottom: 30px;
+}
+.earn-container {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 20px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.earn {
+  padding: 20px;
+
+  box-shadow: 5px 0px 5px 5px #f4f4f4;
+  background: #fff;
+  position: relative;
+}
+
+.earn p {
+  font-size: 14px;
+  padding-top: 10px;
+  font-weight: medium;
+}
+
+.earn-profile {
+  display: flex;
+  flex-direction: row;
+}
+.earn-profile h4 {
+  font-size: 10px;
+  width: 100px;
+  padding-right: 70px;
+}
+.earn-profile {
+  font-size: 10px;
+}
+
+.quote {
+  background-color: #333683;
+  width: 80px;
+  height: 80px;
+  border-radius: 999px;
+  position: absolute;
+  color: #fff;
+  right: -15px;
+  top: -35px;
+}
+
+.quote img {
+  width: 40px;
+  height: 80px;
+  margin: auto;
+}
 @media only screen and (max-width: 600px) {
   header nav {
     display: none;
@@ -276,6 +337,14 @@ body > section > div > div > div > div > div > div > div > button.btn-fill {
     flex-direction: column;
     padding-inline: 10px;
   }
+  .slide-container .btn-outine {
+    margin-inline: 40px;
+    margin-bottom: 10px;
+  }
+  .slide-container .btn-fill,
+  img {
+    margin-inline: 40px;
+  }
 
   .choose-container {
     flex-direction: column;
@@ -287,5 +356,9 @@ body > section > div > div > div > div > div > div > div > button.btn-fill {
     flex-direction: column;
     gap: 20px;
     margin-inline: -40px;
+  }
+  .earn-container {
+    display: flex;
+    flex-direction: column;
   }
 }
