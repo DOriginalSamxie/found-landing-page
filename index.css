@@ -38,8 +38,15 @@ header {
 #brand a {
   color: #000;
 }
-
-ul {
+body > header > nav > ul > li.active {
+  background: #333683;
+  height: 100px;
+  padding-top: 35px;
+}
+body > header > nav > ul > li.active > a {
+  color: #fff;
+}
+nav ul {
   list-style: none;
   height: 100%;
   display: flex;
@@ -47,12 +54,12 @@ ul {
   justify-content: space-around;
   padding-top: 15px;
 }
-ul a {
+nav ul a {
   color: gray;
   font-size: 20px;
   font-weight: 500;
 }
-ul li {
+nav ul li {
   padding: 20px;
   margin-left: 10px;
 }
@@ -154,10 +161,34 @@ body > section > div > div > div > div > div > div > div > button.btn-fill {
   font-size: 16px;
   font-weight: 700;
 }
+.hero-container {
+  position: relative;
+}
+.slider-prev,
+.slider-next {
+  position: absolute;
+  top: 380px;
+  cursor: pointer;
+}
+.slider-prev img {
+  width: 80px;
+  height: 80px;
+}
 
+.slider-next img {
+  width: 80px;
+  height: 80px;
+}
+
+.slider-next {
+  right: 0;
+}
 .hero-section img {
   width: 300px;
   margin-top: 100px;
+}
+.slide-container {
+  display: flex;
 }
 
 /* choose section */
@@ -323,6 +354,111 @@ body > section > div > div > div > div > div > div > div > button.btn-fill {
   height: 80px;
   margin: auto;
 }
+
+/* Find section */
+.find-section {
+  background: #333683;
+  padding-inline: 10px;
+
+  margin-top: 180px;
+}
+
+.find-container {
+  display: flex;
+  gap: 20px;
+}
+.find-container img {
+  width: 300px;
+  height: 400px;
+  margin-top: -100px;
+  margin-left: 30px;
+}
+.find-content {
+  margin-top: 40px;
+}
+.find-content h2 {
+  padding-left: 55px;
+  padding-bottom: 55px;
+  color: #fff;
+  font-size: 24px;
+}
+.find-subtext {
+  display: flex;
+  gap: 60px;
+  padding-left: 45px;
+  padding-bottom: 55px;
+}
+.find-subtext span {
+  padding: 6px 12px;
+  background: #fff;
+  border-radius: 100px;
+  color: #333683;
+}
+.find-lowertext {
+  display: flex;
+}
+.find-lowertext p {
+  padding-left: 10px;
+  padding-top: 6px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.find-button {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 60px;
+  border-radius: 6px;
+  cursor: pointer;
+  gap: 20px;
+}
+
+.find-button button {
+  border: 2px solid #fff;
+  background: #333683;
+  color: #fff;
+  padding: 15px 80px;
+  font-size: 14px;
+  font-weight: 600;
+}
+footer {
+  margin-top: 100px;
+  padding-bottom: 30px;
+}
+
+footer .wrapper {
+  width: 1152px;
+  margin: 0 auto;
+}
+
+footer a {
+  color: #3c3c3c;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 32px 0;
+}
+
+.footer-container ul {
+  margin-top: 30px;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-container ul li {
+  margin: 16px 0;
+}
+/* .find-content {
+  flex: 0, 0, 1;
+} */
+
 @media only screen and (max-width: 600px) {
   header nav {
     display: none;
@@ -346,6 +482,11 @@ body > section > div > div > div > div > div > div > div > button.btn-fill {
     margin-inline: 40px;
   }
 
+  .slider-prev,
+  .slider-next {
+    display: none;
+  }
+
   .choose-container {
     flex-direction: column;
     padding: 40px;
@@ -360,5 +501,72 @@ body > section > div > div > div > div > div > div > div > button.btn-fill {
   .earn-container {
     display: flex;
     flex-direction: column;
+  }
+  .find-section {
+    background: #333683;
+
+    padding-bottom: 50px;
+    margin-top: 200px;
+  }
+  .find-container {
+    flex-direction: column;
+  }
+
+  .find-button {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 60px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .find-subtext {
+    display: flex;
+    gap: 10px;
+    padding-left: 45px;
+    padding-bottom: 55px;
+  }
+  .find-subtext span {
+    background: #fff;
+    border-radius: 100px;
+    color: #333683;
+  }
+  .find-lowertext {
+    display: flex;
+    flex-direction: column;
+  }
+  .find-lowertext span {
+    padding: 4px 12px;
+  }
+  /* footer */
+  footer {
+    margin-top: 10px;
+  }
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 0;
+  }
+  .footer-container .footer-nav {
+    margin-top: 80px;
+  }
+  footer .wrapper {
+    padding: 0;
+    width: auto;
+  }
+  /* Mbile Menu */
+  .mobile-menu {
+    height: 100vh;
+    align-items: center;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    background: #fff;
+    right: 0;
+    z-index: 200;
+    list-style: none;
+  }
+
+  .mobile-menu li {
+    margin: 20px 0;
   }
 }
