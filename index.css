@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 img {
-  width: 100%;
   object-fit: contain;
 }
 
@@ -306,13 +305,19 @@ body > section > div > div > div > div > div > div > div > button.btn-fill {
 .earn-container {
   display: flex;
   justify-content: space-between;
-  padding-inline: 20px;
-  margin-bottom: 40px;
-  margin-top: 40px;
+
+  margin: 70px 100px;
+  padding-right: 40px;
+}
+.earn-container-two {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 40px;
+  margin: 70px 100px;
 }
 
 .earn {
-  padding: 20px;
+  padding: 10px;
 
   box-shadow: 5px 0px 5px 5px #f4f4f4;
   background: #fff;
@@ -320,39 +325,55 @@ body > section > div > div > div > div > div > div > div > button.btn-fill {
 }
 
 .earn p {
-  font-size: 14px;
-  padding-top: 10px;
+  font-size: 12px;
+
   font-weight: medium;
+  padding: 20px 0;
 }
 
 .earn-profile {
   display: flex;
   flex-direction: row;
-}
-.earn-profile h4 {
-  font-size: 10px;
-  width: 100px;
-  padding-right: 70px;
-}
-.earn-profile {
   font-size: 10px;
 }
 
+.earn-profile h4 {
+  font-size: 10px;
+
+  padding-right: 165px;
+}
+
+body > section.earn-section > div > div:nth-child(2) {
+  position: relative;
+  top: 30px;
+}
+body > section.earn-section > div.earn-container-two > div:nth-child(1) {
+  position: relative;
+  top: 50px;
+}
+body > section.earn-section > div.earn-container-two > div:nth-child(3) {
+  position: relative;
+  top: 50px;
+}
 .quote {
   background-color: #333683;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-radius: 999px;
   position: absolute;
   color: #fff;
   right: -15px;
-  top: -35px;
+  top: -25px;
 }
 
 .quote img {
-  width: 40px;
-  height: 80px;
+  width: 30px;
+  height: 60px;
   margin: auto;
+  position: absolute;
+  left: 15px;
+  color: #fff;
+  filter: brightness(0) invert(1);
 }
 
 /* Find section */
@@ -469,6 +490,10 @@ footer a:hover {
   #signup {
     margin-top: 20px;
   }
+  .content h3 {
+    margin-top: 0px;
+  }
+
   .slide-container {
     flex-direction: column;
     padding-inline: 10px;
@@ -498,10 +523,32 @@ footer a:hover {
     gap: 20px;
     margin-inline: -40px;
   }
+  .earn-profile {
+    display: block;
+    flex-direction: column;
+    font-size: 10px;
+  }
   .earn-container {
     display: flex;
     flex-direction: column;
+    padding-right: 0;
+    gap: 30px;
   }
+  .earn-container-two {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    gap: 30px;
+  }
+  .quote {
+    background-color: #333683;
+    width: 60px;
+    height: 60px;
+    border-radius: 999px;
+    position: absolute;
+    color: #fff;
+  }
+
   .find-section {
     background: #333683;
 
