@@ -71,10 +71,26 @@ nav ul li {
 
 #login {
   border: 2px solid #000;
+  padding: 5px 20px;
+}
+#login:hover {
+  background: #333683;
+  border: none;
 }
 #signup {
   border: 1px solid rgb(12, 12, 103);
-  background: rgb(12, 12, 103);
+  background: #333683;
+  padding: 5px 20px;
+}
+#signup a {
+  color: #fff;
+}
+#signup:hover {
+  background: #fff;
+  border: none;
+}
+#signup a:hover {
+  color: #333683;
 }
 
 #hamburger-icon {
@@ -341,8 +357,16 @@ body > section > div > div > div > div > div > div > div > button.btn-fill {
   font-size: 10px;
 
   padding-right: 165px;
+  padding-top: 5px;
 }
-
+.earn-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 2px solid #fff;
+  background: #333683;
+  margin-right: 10px;
+}
 body > section.earn-section > div > div:nth-child(2) {
   position: relative;
   top: 30px;
@@ -533,12 +557,26 @@ footer a:hover {
     flex-direction: column;
     padding-right: 0;
     gap: 30px;
+    margin: 40px;
   }
   .earn-container-two {
     display: flex;
     flex-direction: column;
     padding-left: 0;
     gap: 30px;
+    margin: 40px;
+  }
+  body > section.earn-section > div > div:nth-child(2) {
+    position: relative;
+    top: 0px;
+  }
+  body > section.earn-section > div.earn-container-two > div:nth-child(1) {
+    position: relative;
+    top: 0px;
+  }
+  body > section.earn-section > div.earn-container-two > div:nth-child(3) {
+    position: relative;
+    top: 0px;
   }
   .quote {
     background-color: #333683;
